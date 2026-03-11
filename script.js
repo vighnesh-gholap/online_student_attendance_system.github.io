@@ -1,10 +1,30 @@
 let students = JSON.parse(localStorage.getItem("students")) || [];
 
+let isHost = false;
+
+function hostLogin(){
+
+let password = prompt("Enter host password");
+
+if(password === "admin123"){
+isHost = true;
+alert("Host access granted");
+}else{
+alert("Wrong password");
+}
+
+}
+
 function saveData(){
 localStorage.setItem("students", JSON.stringify(students));
 }
 
 function addStudent(){
+
+if(!isHost){
+alert("Only host can add students");
+return;
+}
 
 let name = document.getElementById("name").value;
 
@@ -27,6 +47,11 @@ document.getElementById("name").value="";
 }
 
 function markAttendance(index,type){
+
+if(!isHost){
+alert("Only host can update attendance");
+return;
+}
 
 if(type=="present"){
 students[index].present++;
