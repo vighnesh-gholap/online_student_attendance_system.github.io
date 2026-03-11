@@ -1,42 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Online Student Attendance System</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <h1>Online Student Attendance System</h1>
 
+<p>Welcome! Teachers can record attendance and students can download study materials.</p>
+
+
+<!-- Navigation Tabs -->
+
 <div class="tabs">
 
-<button onclick="showTab('attendance')">Attendance</button>
-<button onclick="showTab('materials')">Study Material</button>
+<button onclick="showTab('attendance')">📊 Attendance</button>
+<button onclick="showTab('materials')">📚 Study Materials</button>
 
 </div>
 
 
 <!-- Attendance Section -->
 
-<div id="attendance" class="tabcontent">
+<div id="attendance" class="container">
 
-<h2>Add Student</h2>
+<h2>Student Attendance</h2>
+
+<p>Add students and mark attendance below.</p>
 
 <input type="text" id="name" placeholder="Enter Student Name">
 <button onclick="addStudent()">Add Student</button>
 
-<h2>Attendance List</h2>
-
 <table>
 
 <thead>
+
 <tr>
 <th>Student Name</th>
 <th>Present</th>
 <th>Absent</th>
 <th>Attendance %</th>
 </tr>
+
 </thead>
 
 <tbody id="studentList"></tbody>
@@ -46,29 +60,31 @@
 </div>
 
 
-<!-- Study Material Section -->
+<!-- Study Materials Section -->
 
-<div id="materials" class="tabcontent" style="display:none;">
+<div id="materials" class="container" style="display:none;">
 
 <h2>Study Materials</h2>
+
+<p>Students can download notes and study materials below.</p>
 
 <ul>
 
 <li>
-<a href="materials/math_notes.pdf" target="_blank">
-Math Notes
+<a href="study-materials/math_notes.pdf" target="_blank">
+📄 Download Math Notes
 </a>
 </li>
 
 <li>
-<a href="materials/physics_notes.pdf" target="_blank">
-Physics Notes
+<a href="study-materials/physics_notes.pdf" target="_blank">
+📄 Download Physics Notes
 </a>
 </li>
 
 <li>
-<a href="materials/programming_notes.pdf" target="_blank">
-Programming Notes
+<a href="study-materials/programming_notes.pdf" target="_blank">
+📄 Download Programming Notes
 </a>
 </li>
 
@@ -77,7 +93,15 @@ Programming Notes
 </div>
 
 
+<footer style="margin-top:40px">
+
+<p>© 2026 Online Student Attendance System</p>
+
+</footer>
+
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
