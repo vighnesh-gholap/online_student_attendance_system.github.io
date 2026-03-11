@@ -45,3 +45,29 @@ th{
 background:#007bff;
 color:white;
 }
+
+.tabs{
+margin-bottom:20px;
+}
+
+.tabs button{
+padding:10px 20px;
+margin:5px;
+background:#007bff;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+.tabs button:hover{
+background:#0056b3;
+}
+
+ul{
+list-style:none;
+padding:0;
+}
+
+ul li{
+margin:10px;
+}

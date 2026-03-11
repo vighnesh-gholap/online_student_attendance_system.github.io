@@ -9,7 +9,17 @@
 
 <h1>Online Student Attendance System</h1>
 
-<div class="container">
+<div class="tabs">
+
+<button onclick="showTab('attendance')">Attendance</button>
+<button onclick="showTab('materials')">Study Material</button>
+
+</div>
+
+
+<!-- Attendance Section -->
+
+<div id="attendance" class="tabcontent">
 
 <h2>Add Student</h2>
 
@@ -19,6 +29,7 @@
 <h2>Attendance List</h2>
 
 <table>
+
 <thead>
 <tr>
 <th>Student Name</th>
@@ -33,6 +44,38 @@
 </table>
 
 </div>
+
+
+<!-- Study Material Section -->
+
+<div id="materials" class="tabcontent" style="display:none;">
+
+<h2>Study Materials</h2>
+
+<ul>
+
+<li>
+<a href="materials/math_notes.pdf" target="_blank">
+Math Notes
+</a>
+</li>
+
+<li>
+<a href="materials/physics_notes.pdf" target="_blank">
+Physics Notes
+</a>
+</li>
+
+<li>
+<a href="materials/programming_notes.pdf" target="_blank">
+Programming Notes
+</a>
+</li>
+
+</ul>
+
+</div>
+
 
 <script src="script.js"></script>
 

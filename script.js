@@ -74,3 +74,12 @@ document.getElementById("studentList").innerHTML = table;
 }
 
 displayStudents();
+
+function showTab(tab){
+
+document.getElementById("attendance").style.display="none";
+document.getElementById("materials").style.display="none";
+
+document.getElementById(tab).style.display="block";
+
+}
